@@ -1,0 +1,16 @@
+{
+    "name": "cl1_hive",
+    "description": "hive service client",
+    "isEnabled": true,
+    "type": "hive",
+    "configs": {
+        "username": "hive",
+        "password": "hive",
+        "jdbc.driverClassName": "org.apache.hive.jdbc.HiveDriver",
+        "jdbc.url": "jdbc:hive2://localhost:10500",
+        "ambari.service.check.user": "ambari-qa",
+        "tag.download.auth.users": "hive",
+        "policy.download.auth.users": "hive",
+        "policy.grantrevoke.auth.users": "hive"
+    }
+}

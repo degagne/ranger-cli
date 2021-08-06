@@ -1,0 +1,41 @@
+{
+    "service": "cl1_hadoop",
+    "name": "Access to Hive database warehouse",
+    "description": "Provides access to the Hive database warehouse for jsmith user",
+    "isAuditEnabled": true,
+    "isEnabled": true,
+    "resources": {
+        "path": {
+            "values": [
+                "/user/hive/warehouse"
+            ],
+            "isRecursive": true,
+            "isExclusive": false
+        }
+    },
+    "policyItems": [
+        {
+            "accesses": [
+                {
+                    "type": "read",
+                    "isAllowed": true
+                },
+                {
+                    "type": "write",
+                    "isAllowed": true
+                },
+                {
+                    "type": "execute",
+                    "isAllowed": true
+                }
+            ],
+            "roles": [],
+            "groups": [],
+            "conditions": [],
+            "delegateAdmin": true,
+            "users": [
+                "jsmith"
+            ]
+        }
+    ]
+}

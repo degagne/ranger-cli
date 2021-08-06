@@ -1,0 +1,21 @@
+{
+    "name": "cl1_hdfs",
+    "description": "hdfs service client",
+    "isEnabled": true,
+    "type": "hdfs",
+    "configs": {
+        "username": "hdfs",
+        "password": "hdfs",
+        "fs.default.name": "hdfs://hadoop.example.com",
+        "hadoop.security.authorization": true,
+        "hadoop.security.authentication": "kerberos",
+        "hadoop.security.auth_to_local": "RULE:[1:$1@$0](ambari-qa-hadoop.example.com@EXAMPLE.COM)s/.*/ambari-qa/",
+        "dfs.datanode.kerberos.principal": "dn/m1.hadoop.example.com@EXAMPLE.COM",
+        "dfs.namenode.kerberos.principal": "nn/m1.hadoop.example.com@EXAMPLE.COM",
+        "dfs.secondary.namenode.kerberos.principal": "nn/m1.hadoop.example.com@EXAMPLE.COM",
+        "hadoop.rpc.protection": "authentication",
+        "ambari.service.check.user": "ambari-qa",
+        "tag.download.auth.users": "hdfs",
+        "policy.download.auth.users": "hdfs"
+    }
+}

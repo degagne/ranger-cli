@@ -1,0 +1,28 @@
+---
+service: hdp_hive
+name: Datamask policy for test.db
+description: Provides a datamask resource-based policy for test.db
+isAuditEnabled: true
+isEnabled: true
+resources:
+  database:
+    values:
+    - test.db
+    isRecursive: true
+  table:
+    values:
+    - *
+    isExcludes: false
+  column:
+    values:
+    - *
+    isExcludes: false
+dataMaskPolicyItems:
+-
+  accesses:
+    - type: select
+      isAllowed: true
+  dataMaskInfo:
+    dataMaskType: MASK_SHOW_FIRST_4
+  users:
+  - hive

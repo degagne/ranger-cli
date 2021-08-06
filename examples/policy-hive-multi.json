@@ -1,0 +1,134 @@
+{
+    "serviceName": "cl1_hive",
+    "serviceId": 8,
+    "policies": [
+        {
+            "service": "cl1_hive",
+            "name": "Hive access to test.db",
+            "description": "Provides access to Hive 'test.db' database",
+            "isAuditEnabled": true,
+            "isEnabled": true,
+            "resources": {
+                "database": {
+                    "values": [
+                        "test.db"
+                    ],
+                    "isRecursive": true,
+                    "isExclusive": false
+                },
+                "table": {
+                    "values": [
+                        "*"
+                    ],
+                    "isRecursive": true,
+                    "isExclusive": false
+                },
+                "column": {
+                    "values": [
+                        "*"
+                    ],
+                    "isRecursive": true,
+                    "isExclusive": false
+                }
+            },
+            "policyItems": [
+                {
+                    "accesses": [
+                        {
+                            "type": "all",
+                            "isAllowed": true
+                        }
+                    ],
+                    "roles": [],
+                    "groups": [],
+                    "conditions": [],
+                    "delegateAdmin": true,
+                    "users": [
+                        "jsmith"
+                    ]
+                },
+                {
+                    "accesses": [
+                        {
+                            "type": "select",
+                            "isAllowed": true
+                        },
+                        {
+                            "type": "read",
+                            "isAllowed": true
+                        }
+                    ],
+                    "roles": [],
+                    "groups": [
+                        "hadoop-users"
+                    ],
+                    "conditions": [],
+                    "delegateAdmin": false,
+                    "users": []
+                }
+            ]
+        },
+        {
+            "service": "cl1_hive",
+            "name": "Hive access to jsmith.db",
+            "description": "Provides access to Hive 'jsmith.db' database",
+            "isAuditEnabled": true,
+            "isEnabled": true,
+            "resources": {
+                "database": {
+                    "values": [
+                        "jsmith.db"
+                    ],
+                    "isRecursive": true,
+                    "isExclusive": false
+                },
+                "table": {
+                    "values": [
+                        "*"
+                    ],
+                    "isRecursive": true,
+                    "isExclusive": false
+                },
+                "column": {
+                    "values": [
+                        "*"
+                    ],
+                    "isRecursive": true,
+                    "isExclusive": false
+                }
+            },
+            "policyItems": [
+                {
+                    "accesses": [
+                        {
+                            "type": "all",
+                            "isAllowed": true
+                        }
+                    ],
+                    "roles": [],
+                    "groups": [],
+                    "conditions": [],
+                    "delegateAdmin": true,
+                    "users": [
+                        "jsmith"
+                    ]
+                },
+                {
+                    "accesses": [
+                        {
+                            "type": "select",
+                            "isAllowed": true
+                        }
+                    ],
+                    "roles": [],
+                    "groups": [
+                        "hadoop-users"
+                    ],
+                    "conditions": [],
+                    "delegateAdmin": false,
+                    "users": []
+                }
+            ]
+        }
+    ]
+}
